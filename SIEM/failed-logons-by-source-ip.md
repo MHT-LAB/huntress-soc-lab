@@ -65,10 +65,11 @@ a successful session, or a failure with NLA turned off.
 
 | failed_attempts | IpAddress | TargetUserName |
 |---|---|---|
-| 2 | 100.108.182.96 | ramse |
+| 2 | 100.x.x.x *(redacted — personal Tailscale IP)* | *(redacted — personal account)* |
 
 Matched exactly against the local Windows Event Log — same timestamps,
-same IP, same LogonType. Confirms the full pipeline end to end: RDP
+same IP, same LogonType (specific IP/username redacted above; the match
+itself is what confirms the pipeline). Confirms the full pipeline end to end: RDP
 failure → Windows Security log → Huntress SIEM ingestion → saved search.
 
 ## Why source IP, not just event ID
